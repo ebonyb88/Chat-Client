@@ -6,30 +6,54 @@
 
     <title>Chat it Out</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.slim.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <style>
 
     body {
-      background-image: url("http://marketing-assets.avvo.com/uploads/sites/4/2012/06/chat.jpg");
-      background-attachment: fixed;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-    }
+     background-color: white;
+   }
 
-    input {
-      border: none;
-      background-color: transparent;
-    }
+   .icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+   }
+
+   .icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+   }
+
+   .icon-bar a:hover {
+    background-color: #000;
+   }
+
   </style>
   </head>
   <body>
 
-<div id="messages"></div>
-<div>
-  <input class="form-control" id="input" placeholder="Let's Chat!"></input>
-  <button class="btn btn-primary" onclick="sendMessage()">Send</button>
-  <div>
+    <div class="icon-bar">
+      <a class="active" href="#"><i class="fas fa-bars"></i></a>
+      <a href="#"><i class="far fa-comment"></i></a>
+      <a href="#"><i class="far fa-user"></i></a>
+    </div>
+
+
+    <div id="messages"></div>
+      <div>
+      <input class="form-control form-control-lg" id="input" placeholder="Let's Chat!"></input>
+      <button class="btn btn-secondary" onclick="sendMessage()">Send</button>
+    <div>
+    
 
     <script type="text/javascript">
 
